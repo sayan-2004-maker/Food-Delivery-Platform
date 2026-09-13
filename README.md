@@ -12,14 +12,6 @@ A MongoDB-backed restaurant discovery and food ordering platform. The React/Vite
 
 Frontend: http://localhost:5173 · API: http://localhost:5000
 
-## Demo accounts
-
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin@feastflow.com | Password123! |
-| Restaurant owner | owner@feastflow.com | Password123! |
-| Customer | customer@feastflow.com | Password123! |
-
 ## Structure
 
 `frontend/src` contains reusable UI, global app state, API client, pages and responsive CSS. `backend/models` defines Mongoose relationships; `backend/server.js` contains the REST application and role gates; `backend/seed.js` produces 22 restaurants, 110 menu items, categories, offers, coupons and sample accounts. Full endpoint notes are in [API.md](API.md).
