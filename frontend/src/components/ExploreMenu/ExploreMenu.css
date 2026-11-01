@@ -1,0 +1,245 @@
+/* ================= MAIN CONTAINER ================= */
+
+.explore-menu {
+    max-width: 1100px;
+    margin: 80px auto 40px auto;
+    padding: 40px 15px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align: center;
+
+    /* Make sure another element cannot block clicks */
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+
+/* ================= HEADING ================= */
+
+.explore-menu h1 {
+    color: #262626;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+
+/* ================= DESCRIPTION ================= */
+
+.explore-menu-text {
+    max-width: 650px;
+    color: #808080;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+
+/* ================= MENU LIST ================= */
+
+.explore-menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+    margin: 25px 0;
+    padding: 10px 0;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    /* Make sure the list receives clicks */
+    position: relative;
+    z-index: 20;
+    pointer-events: auto;
+}
+
+
+/* Hide scrollbar */
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ================= MENU ITEM ================= */
+
+.explore-menu-list-item {
+    width: 95px;
+    min-width: 95px;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Important for clicking */
+    position: relative;
+    z-index: 30;
+    pointer-events: auto;
+
+    user-select: none;
+}
+
+
+/* Hover item */
+
+.explore-menu-list-item:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ================= MENU IMAGE ================= */
+
+.explore-menu-list-item img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+
+/* Image hover */
+
+.explore-menu-list-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ================= ACTIVE MENU ================= */
+
+.explore-menu-list-item .active {
+    border: 3px solid tomato;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+
+/* ================= MENU TEXT ================= */
+
+.explore-menu-list-item p {
+    margin-top: 10px;
+
+    color: #747474;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* ================= DIVIDER ================= */
+
+.explore-menu hr {
+    width: 100%;
+
+    margin: 20px 0;
+
+    height: 2px;
+
+    background-color: #e2e2e2;
+    border: none;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1050px) {
+
+    .explore-menu {
+        padding: 0 5vw;
+    }
+
+    .explore-menu h1 {
+        font-size: 26px;
+    }
+
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .explore-menu-list {
+        gap: 25px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    .explore-menu {
+        padding: 0 20px;
+        margin-top: 50px;
+    }
+
+    .explore-menu h1 {
+        font-size: 22px;
+    }
+
+    .explore-menu-text {
+        font-size: 13px;
+    }
+
+    .explore-menu-list {
+        gap: 20px;
+
+        /* Allow horizontal scrolling on mobile */
+        justify-content: flex-start;
+
+        overflow-x: auto;
+    }
+
+    .explore-menu-list-item {
+        width: 75px;
+        min-width: 75px;
+    }
+
+    .explore-menu-list-item img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 12px;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .explore-menu {
+        padding: 0 15px;
+    }
+
+    .explore-menu-list {
+        gap: 15px;
+    }
+
+    .explore-menu-list-item {
+        width: 70px;
+        min-width: 70px;
+    }
+
+    .explore-menu-list-item img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 11px;
+    }
+}

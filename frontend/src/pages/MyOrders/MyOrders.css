@@ -1,0 +1,244 @@
+.my-orders {
+    width: min(1120px, calc(100% - 48px));
+    min-height: 55vh;
+    margin: 42px auto 70px;
+}
+.my-orders > h2 {
+    color: #292a2e;
+    font-size: 28px;
+    letter-spacing: -.5px;
+}
+.my-orders .container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 24px;
+}
+.my-orders-message {
+    padding: 22px;
+    border: 1px solid #eee9e6;
+    border-radius: 11px;
+    background: #fffdfb;
+    color: #77747a;
+    font-size: 13px;
+}
+.my-orders-error button {
+    margin-left: 12px;
+    padding: 7px 11px;
+    border: 1px solid #f0d7d1;
+    border-radius: 7px;
+    background: #fff;
+    color: #bd4435;
+    cursor: pointer;
+}
+.my-order-card {
+    display: flex;
+    flex-direction: column;
+}
+.my-order-order {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 2fr) minmax(80px, .7fr) minmax(65px, .6fr) minmax(110px, 1fr) 100px;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 18px;
+    border: 1px solid #eee9e6;
+    border-radius: 12px;
+    background: white;
+    color: #57535a;
+    font-size: 12px;
+    box-shadow: 0 5px 18px rgb(52 38 29 / 4%);
+}
+.my-order-order > img {
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border-radius: 10px;
+    background: #fff4f0;
+    object-fit: contain;
+}
+.my-order-order > p:first-of-type {
+    color: #39363c;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.my-order-order p span {
+    margin-right: 5px;
+    color: #e34735;
+}
+.my-order-order p b {
+    color: #454047;
+    font-weight: 600;
+}
+.my-order-order button {
+    min-height: 36px;
+    padding: 0 12px;
+    border: 1px solid #f0dcd6;
+    border-radius: 7px;
+    background: #fff8f5;
+    color: #bd4435;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .16s ease;
+}
+.my-order-order button:hover {
+    background: #ffede7;
+}
+.my-order-tracking {
+    padding: 20px 22px;
+    border: 1px solid #eee9e6;
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    background: #fffdfb;
+}
+.my-order-order.is-tracking {
+    border-radius: 12px 12px 0 0;
+}
+.my-order-tracking-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+.my-order-tracking-heading h3 {
+    margin: 0 0 5px;
+    color: #39363c;
+    font-size: 15px;
+}
+.my-order-tracking-heading p,
+.my-order-tracking-address,
+.my-order-cancelled-message {
+    margin: 0;
+    color: #77747a;
+    font-size: 11px;
+    line-height: 1.6;
+}
+.my-order-tracking-heading > strong {
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: #fff0e9;
+    color: #bd4435;
+    font-size: 11px;
+    white-space: nowrap;
+}
+.my-order-tracking-heading > .tracking-cancelled {
+    background: #f3eeee;
+    color: #6f6464;
+}
+.my-order-tracking-steps {
+    display: flex;
+    margin: 24px 0;
+    padding: 0;
+    list-style: none;
+}
+.my-order-tracking-steps li {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #9a969b;
+    font-size: 10px;
+    text-align: center;
+}
+.my-order-tracking-steps li:not(:last-child)::after {
+    position: absolute;
+    top: 13px;
+    left: calc(50% + 15px);
+    width: calc(100% - 30px);
+    height: 2px;
+    background: #e8e2df;
+    content: "";
+}
+.my-order-tracking-steps li.complete:not(:last-child)::after {
+    background: #e34735;
+}
+.tracking-step-marker {
+    z-index: 1;
+    display: grid;
+    width: 27px;
+    height: 27px;
+    place-items: center;
+    border: 2px solid #e8e2df;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 10px;
+}
+.my-order-tracking-steps li.complete {
+    color: #bd4435;
+}
+.my-order-tracking-steps li.complete .tracking-step-marker {
+    border-color: #e34735;
+    background: #e34735;
+    color: white;
+}
+.my-order-tracking-steps li.current {
+    color: #39363c;
+    font-weight: 700;
+}
+.my-order-tracking-address {
+    padding-top: 12px;
+    border-top: 1px solid #eee9e6;
+}
+@media (max-width: 900px) {
+    .my-orders {
+        width: calc(100% - 32px);
+        margin: 30px auto 54px;
+    }
+    .my-order-order {
+        grid-template-columns: 42px minmax(0, 2fr) minmax(70px, .7fr) minmax(60px, .6fr);
+        gap: 12px;
+        font-size: 11px;
+    }
+    .my-order-order button {
+        grid-column: 2 / -1;
+        justify-self: start;
+    }
+}
+@media (max-width: 560px) {
+    .my-orders {
+        width: calc(100% - 28px);
+        margin-top: 24px;
+    }
+    .my-orders > h2 {
+        font-size: 24px;
+    }
+    .my-order-order {
+        grid-template-columns: 38px minmax(0, 1fr) auto;
+        gap: 10px;
+        padding: 13px;
+    }
+    .my-order-order > img {
+        width: 36px;
+        height: 36px;
+    }
+    .my-order-order > p:nth-of-type(3),
+    .my-order-order > p:nth-of-type(4) {
+        grid-column: 2 / -1;
+    }
+    .my-order-order button {
+        grid-column: 2 / -1;
+    }
+    .my-order-tracking {
+        padding: 16px 13px;
+    }
+    .my-order-tracking-steps {
+        gap: 3px;
+        margin: 20px 0;
+    }
+    .my-order-tracking-steps li {
+        font-size: 8px;
+    }
+    .my-order-tracking-steps li:not(:last-child)::after {
+        left: calc(50% + 12px);
+        width: calc(100% - 24px);
+    }
+    .tracking-step-marker {
+        width: 23px;
+        height: 23px;
+    }
+    .my-order-tracking-steps li:not(:last-child)::after {
+        top: 11px;
+    }
+}

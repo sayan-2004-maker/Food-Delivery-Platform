@@ -1,0 +1,43 @@
+.discovery-page { max-width: 1240px; margin: 0 auto; padding: 28px 24px 76px; }
+.discovery-hero { position: relative; display: flex; align-items: center; min-height: 380px; overflow: hidden; padding: 48px 5.5%; border: 1px solid #f1e7e2; border-radius: 20px; background: linear-gradient(105deg, #fff8f4 0%, #fff8f4 47%, #f8e9df 100%); color: #292a2e; }
+.discovery-hero-content { position: relative; z-index: 1; width: min(610px, 58%); }
+.discovery-kicker { color: #d84c3b; font-size: 10px; font-weight: 800; letter-spacing: 1.55px; }
+.discovery-hero h1 { margin: 13px 0 12px; font-size: clamp(38px, 5vw, 60px); line-height: 1.04; letter-spacing: -2px; }
+.discovery-hero-content > p { max-width: 430px; margin: 0 0 23px; color: #717078; font-size: 15px; line-height: 1.65; }
+.discovery-search { display: flex; align-items: center; gap: 11px; width: min(500px, 100%); padding: 7px; border: 1px solid #eee8e4; border-radius: 11px; background: white; box-shadow: 0 8px 26px #49372b0c; }
+.discovery-location { display: flex; flex: 1; align-items: center; gap: 7px; min-width: 155px; padding: 0 9px; color: #d84c3b; }
+.discovery-location span { font-size: 20px; }
+.discovery-location input { width: 100%; border: 0; outline: 0; color: #30343a; font: inherit; font-size: 12px; }
+.discovery-search button, .discovery-join button { border: 0; border-radius: 8px; background: #e34735; color: white; padding: 12px 20px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; transition: background .16s ease, transform .16s ease; }
+.discovery-search button:hover, .discovery-join button:hover { transform: translateY(-1px); background: #c93729; }
+.discovery-hero-note { margin-top: 15px; color: #77747a; font-size: 11px; }
+.discovery-hero-note span { margin-right: 5px; color: #e34735; }
+.discovery-hero-art { position: absolute; top: 0; right: 0; width: 44%; height: 100%; overflow: hidden; }
+.discovery-hero-art::before { position: absolute; z-index: 1; inset: 0 auto 0 0; width: 30%; content: ""; background: linear-gradient(90deg, #fff8f4, transparent); }
+.discovery-hero-art > img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.discovery-art-tag { position: absolute; right: 20px; bottom: 18px; display: grid; gap: 3px; padding: 11px 15px; border: 1px solid #ffffffaa; border-radius: 9px; background: #fffdf9ed; box-shadow: 0 5px 20px #27201a17; color: #777078; font-size: 10px; }
+.discovery-art-tag strong { color: #302d30; font-size: 12px; }
+.discovery-section { margin-top: 48px; }
+.discovery-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 20px; }
+.discovery-section-heading h2, .discovery-join h2 { margin: 7px 0 0; color: #282d35; font-size: clamp(22px, 3vw, 28px); letter-spacing: -.5px; }
+.discovery-section-heading p { margin: 7px 0 0; color: #818791; font-size: 13px; }
+.discovery-section-heading > button { border: 0; background: transparent; color: #d74335; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.discovery-section-heading > button span { margin-left: 5px; font-size: 18px; }
+.discovery-category-row { display: grid; grid-template-columns: repeat(11, minmax(75px, 1fr)); gap: 10px; overflow-x: auto; padding: 3px 1px 9px; }
+.discovery-category { display: flex; min-width: 78px; align-items: center; flex-direction: column; gap: 9px; border: 0; background: transparent; color: #5a6069; font: inherit; font-size: 11px; cursor: pointer; }
+.discovery-category-image { display: grid; place-items: center; width: 68px; height: 68px; border: 1px solid #f0e8e3; border-radius: 50%; background: #fff8f4; object-fit: cover; transition: transform .18s ease, box-shadow .18s ease; }
+.discovery-category:hover .discovery-category-image { transform: translateY(-3px); box-shadow: 0 8px 18px #e2374420; }
+.discovery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px 18px; }
+.discovery-message { padding: 32px 18px; border: 1px dashed #dedfe3; border-radius: 14px; color: #747b86; text-align: center; }
+.discovery-message button { display: block; margin: 12px auto 0; border: 0; background: none; color: #d74335; font-weight: 700; cursor: pointer; }
+.restaurant-unavailable-icon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: #fff0ec; color: #d84c3b; font-size: 21px; font-weight: 700; }
+.restaurant-skeleton { height: 300px; padding: 12px; border: 1px solid #eee; border-radius: 17px; }
+.restaurant-skeleton div { height: 185px; margin-bottom: 15px; border-radius: 11px; background: linear-gradient(90deg, #f1f2f4, #fafafa, #f1f2f4); background-size: 200% 100%; animation: skeletonMove 1.3s infinite; }
+.restaurant-skeleton span { display: block; height: 12px; width: 62%; margin: 10px 0; border-radius: 8px; background: #f0f1f3; }
+.restaurant-skeleton span:last-child { width: 42%; }
+.discovery-join { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 54px; padding: 27px 30px; border: 1px solid #f2ded5; border-radius: 14px; background: linear-gradient(100deg, #fff5ef, #fffdfb); }
+.discovery-join h2 { max-width: 620px; font-size: 22px; }
+@keyframes skeletonMove { to { background-position: -200% 0; } }
+@media (max-width: 1000px) { .discovery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .discovery-hero-art { width: 40%; } .discovery-hero-content { width: 62%; } }
+@media (max-width: 760px) { .discovery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .discovery-hero-art { opacity: .72; } }
+@media (max-width: 620px) { .discovery-page { padding: 14px 14px 50px; } .discovery-hero { min-height: 475px; align-items: start; padding: 30px 19px; border-radius: 15px; } .discovery-hero-content { width: 100%; } .discovery-hero h1 { font-size: 39px; } .discovery-hero-content > p { max-width: 350px; font-size: 13px; } .discovery-hero-art { top: auto; right: 0; bottom: 0; width: 100%; height: 190px; opacity: 1; } .discovery-hero-art::before { inset: 0 0 auto; width: 100%; height: 45%; background: linear-gradient(#fff8f4, transparent); } .discovery-art-tag { right: 12px; bottom: 12px; padding: 8px 10px; } .discovery-art-tag strong { font-size: 11px; } .discovery-search { position: relative; flex-wrap: wrap; gap: 8px; } .discovery-location { min-width: 100%; padding: 4px; } .discovery-search button { width: 100%; padding: 10px 13px; } .discovery-section { margin-top: 37px; } .discovery-section-heading { align-items: start; } .discovery-section-heading h2 { font-size: 21px; } .discovery-section-heading > button { padding-top: 12px; font-size: 11px; } .discovery-category-row { grid-template-columns: repeat(11, 76px); } .discovery-grid { grid-template-columns: 1fr; gap: 13px; } .discovery-join { align-items: start; flex-direction: column; padding: 22px; } }

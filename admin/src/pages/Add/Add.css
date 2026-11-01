@@ -1,0 +1,155 @@
+.add:not(.list) {
+    display: block;
+    flex: 1;
+    width: auto;
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 38px 28px 64px;
+    color: var(--text);
+    font-size: 13px;
+}
+.add:not(.list) > form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+.add:not(.list) > form::before {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+    color: #77747a;
+    content: "MENU MANAGEMENT";
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+.add:not(.list) .add-product-name,
+.add:not(.list) .add-product-description,
+.add:not(.list) .add-img-upload {
+    width: 100%;
+}
+.add:not(.list) .add-product-name,
+.add:not(.list) .add-product-description,
+.add:not(.list) .add-category,
+.add:not(.list) .add-price,
+.add:not(.list) .add-img-upload {
+    align-items: flex-start;
+    gap: 8px;
+    color: #48454a;
+    font-size: 12px;
+    font-weight: 600;
+}
+.add:not(.list) .add-img-upload {
+    grid-column: 1 / -1;
+}
+.add:not(.list) .add-img-upload label {
+    display: inline-flex;
+    overflow: hidden;
+    min-width: 150px;
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #e2d9d5;
+    border-radius: 10px;
+    background: #fffaf7;
+    cursor: pointer;
+}
+.add:not(.list) .add-img-upload img {
+    width: 150px;
+    max-height: 120px;
+    object-fit: contain;
+}
+.add:not(.list) .add-product-name input,
+.add:not(.list) .add-product-name select,
+.add:not(.list) .add-product-description textarea,
+.add:not(.list) .add-category-price input,
+.add:not(.list) .add-category-price select {
+    width: 100%;
+    max-width: none;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #e8e2df;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #353238;
+    font-size: 13px;
+    font-weight: 400;
+    transition: border-color .16s ease, box-shadow .16s ease;
+}
+.add:not(.list) .add-product-description textarea {
+    min-height: 112px;
+    resize: vertical;
+}
+.add:not(.list) .add-product-name input:focus,
+.add:not(.list) .add-product-name select:focus,
+.add:not(.list) .add-product-description textarea:focus,
+.add:not(.list) .add-category-price input:focus,
+.add:not(.list) .add-category-price select:focus {
+    border-color: #e9a094;
+    box-shadow: 0 0 0 3px #e3473512;
+}
+.add:not(.list) .add-category-price {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+.add:not(.list) > form > .add-product-name:nth-last-of-type(1) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+}
+.add:not(.list) .add-product-name small {
+    color: #c93729;
+    font-size: 11px;
+    font-weight: 400;
+}
+.add:not(.list) .add-btn {
+    min-height: 42px;
+    align-self: end;
+    justify-self: start;
+    min-width: 126px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--brand);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .16s ease, transform .16s ease;
+}
+.add:not(.list) .add-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    background: var(--brand-dark);
+}
+.add:not(.list) .add-btn:disabled {
+    opacity: .65;
+    cursor: wait;
+}
+@media (max-width: 760px) {
+    .add:not(.list) {
+        padding: 24px 16px 42px;
+    }
+}
+@media (max-width: 560px) {
+    .add:not(.list) > form {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 18px;
+    }
+    .add:not(.list) .add-product-description,
+    .add:not(.list) .add-category-price,
+    .add:not(.list) .add-img-upload,
+    .add:not(.list) > form > .add-product-name:nth-last-of-type(1) {
+        grid-column: auto;
+        max-width: none;
+    }
+    .add:not(.list) .add-category-price {
+        grid-template-columns: 1fr 1fr;
+    }
+}

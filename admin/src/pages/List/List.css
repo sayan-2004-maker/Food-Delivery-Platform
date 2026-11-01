@@ -1,0 +1,190 @@
+.list.add {
+    display: block;
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 38px 28px 64px;
+    color: var(--text);
+    font-size: 13px;
+}
+.list.add > p:first-child {
+    margin: 0 0 18px;
+    color: #292a2e;
+    font-size: 25px;
+    font-weight: 650;
+    letter-spacing: -.5px;
+}
+.list-table {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+.list-table-format {
+    display: grid;
+    grid-template-columns: 68px minmax(140px, 1.4fr) minmax(150px, 1.3fr) minmax(90px, .8fr) minmax(70px, .5fr) minmax(105px, .7fr);
+    min-height: 68px;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 18px;
+    border-bottom: 1px solid #f1eeec;
+    color: #5e5a60;
+    font-size: 12px;
+}
+.list-table-format:last-child {
+    border-bottom: 0;
+}
+.list-table-format.title {
+    min-height: 46px;
+    background: #fffaf7;
+    color: #777178;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .45px;
+    text-transform: uppercase;
+}
+.list-table-format img {
+    width: 50px;
+    height: 48px;
+    border-radius: 8px;
+    background: #f7f3f1;
+    object-fit: cover;
+}
+.list-table-format select {
+    width: 100%;
+    min-width: 0;
+    padding: 8px 10px;
+    border: 1px solid #e8e2df;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    color: #4a464c;
+    font-size: 11px;
+}
+.list-table-format select:focus {
+    border-color: #e9a094;
+    box-shadow: 0 0 0 3px #e3473512;
+}
+.list-table > p {
+    padding: 24px 18px;
+    color: var(--muted);
+}
+.food-list-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.food-list-actions button {
+    min-height: 30px;
+    padding: 5px 9px;
+    border: 1px solid #e8e2df;
+    border-radius: 6px;
+    background: #fff;
+    color: #4c484d;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background .16s ease, color .16s ease;
+}
+.food-list-actions button:hover {
+    background: #fff4f0;
+    color: var(--brand-dark);
+}
+.food-edit-backdrop {
+    position: fixed;
+    z-index: 40;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    background: #171a2080;
+    backdrop-filter: blur(3px);
+}
+.food-edit-modal {
+    display: flex;
+    width: min(520px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 20px 70px #0003;
+}
+.food-edit-modal h2 {
+    margin: 0 0 4px;
+    color: #2c3038;
+    font-size: 20px;
+}
+.food-edit-modal label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #555c67;
+    font-size: 12px;
+}
+.food-edit-modal input,
+.food-edit-modal textarea,
+.food-edit-modal select {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #dfe1e5;
+    border-radius: 7px;
+    font: inherit;
+}
+.food-edit-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.food-edit-modal .food-edit-available {
+    flex-direction: row;
+    align-items: center;
+}
+.food-edit-modal .food-edit-available input {
+    width: auto;
+    accent-color: var(--brand);
+}
+.food-edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+    margin-top: 8px;
+}
+.food-edit-actions button {
+    padding: 9px 13px;
+    border: 1px solid #e1e2e5;
+    border-radius: 7px;
+    background: white;
+    cursor: pointer;
+}
+.food-edit-actions button[type=submit] {
+    border-color: var(--brand);
+    background: var(--brand);
+    color: white;
+}
+@media (max-width: 900px) {
+    .list-table-format {
+        grid-template-columns: 58px minmax(100px, 1.2fr) minmax(115px, 1.2fr) minmax(72px, .8fr) minmax(55px, .5fr) 92px;
+        gap: 9px;
+        padding: 10px 12px;
+    }
+}
+@media (max-width: 680px) {
+    .list.add {
+        padding: 26px 14px 42px;
+    }
+    .list.add > p:first-child {
+        font-size: 22px;
+    }
+    .list-table {
+        overflow-x: auto;
+    }
+    .list-table-format {
+        min-width: 660px;
+    }
+}

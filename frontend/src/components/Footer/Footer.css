@@ -1,0 +1,101 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    margin-top: 72px;
+    padding: 48px max(24px, calc((100% - 1192px) / 2)) 22px;
+    background: #272629;
+    color: #d8d5d4;
+}
+.footer-content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 54px;
+}
+.footer-content-left,
+.footer-content-right,
+.footer-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.footer-wordmark {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 750;
+    letter-spacing: -1.5px;
+    line-height: 1;
+}
+.footer-wordmark span {
+    color: #f06a54;
+}
+.footer-content-left > p {
+    max-width: 300px;
+    color: #aaa6a5;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.footer-content-right h2,
+.footer-content-center h2 {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+.footer-content-left ul,
+.footer-content-right ul,
+.footer-content-center ul {
+    list-style: none;
+}
+.footer-content-right li,
+.footer-content-center li {
+    margin-bottom: 11px;
+    color: #c1bdbc;
+    font-size: 12px;
+    transition: color .16s ease;
+}
+.footer-content-right li:hover,
+.footer-content-center li:hover {
+    color: white;
+}
+.footer-social-icons {
+    display: flex;
+    gap: 10px;
+}
+.footer-social-icons img {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    padding: 4px;
+    background: #3a383b;
+    transition: background .16s ease;
+}
+.footer-social-icons img:hover {
+    background: #e34735;
+}
+.footer hr {
+    width: 100%;
+    height: 1px;
+    margin: 3px 0;
+    border: 0;
+    background: #454245;
+}
+.footer .footer-copyright {
+    color: #969192;
+    font-size: 11px;
+}
+@media (max-width: 700px) {
+    .footer {
+        margin-top: 48px;
+        padding: 38px 22px 20px;
+    }
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 20px;
+    }
+    .footer-content-left {
+        grid-column: 1 / -1;
+    }
+}

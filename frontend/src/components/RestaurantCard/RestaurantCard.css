@@ -1,0 +1,15 @@
+.restaurant-card { display: block; min-width: 0; overflow: hidden; border: 1px solid transparent; border-radius: 14px; background: white; color: inherit; text-decoration: none; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.restaurant-card:hover { transform: translateY(-3px); border-color: #f1e8e3; box-shadow: 0 12px 28px #282d3512; }
+.restaurant-card-image-wrap { position: relative; height: 185px; overflow: hidden; border-radius: 12px; background: #f0f1f3; }
+.restaurant-card-image { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+.restaurant-card:hover .restaurant-card-image { transform: scale(1.04); }
+.restaurant-offer, .restaurant-closed { position: absolute; left: 10px; bottom: 10px; padding: 6px 9px; border-radius: 5px; background: #e34735; color: white; font-size: 11px; font-weight: 700; }
+.restaurant-closed { left: auto; right: 12px; background: #292d34d9; }
+.restaurant-card-content { padding: 12px 9px 13px; }
+.restaurant-card-title { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.restaurant-card-title h3 { margin: 0; overflow: hidden; color: #252a32; font-size: 16px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.restaurant-time { flex: 0 0 auto; padding: 4px 7px; border-radius: 5px; background: #f3f4f5; color: #555d68; font-size: 11px; font-weight: 600; }
+.restaurant-card-cuisines { overflow: hidden; margin: 8px 0 12px; color: #777b83; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.restaurant-card-meta { display: flex; justify-content: space-between; gap: 8px; color: #777e88; font-size: 10px; }
+.restaurant-card-footer { margin-top: 11px; padding-top: 10px; border-top: 1px solid #f0f0f0; }
+@media (max-width: 600px) { .restaurant-card-image-wrap { height: 165px; } }

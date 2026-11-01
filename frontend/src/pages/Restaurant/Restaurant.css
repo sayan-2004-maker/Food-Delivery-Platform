@@ -1,0 +1,38 @@
+.restaurant-detail-page { max-width: 1160px; min-height: 70vh; margin: auto; padding: 20px 22px 80px; }
+.restaurant-back-link { margin: 5px 0 14px; border: 0; background: none; color: #777e88; font: inherit; font-size: 13px; cursor: pointer; }
+.restaurant-detail-hero { position: relative; height: 330px; overflow: hidden; border-radius: 18px; background: #29231f; }
+.restaurant-detail-hero > img { width: 100%; height: 100%; object-fit: cover; opacity: .7; }
+.restaurant-detail-overlay { position: absolute; inset: auto 0 0; padding: 28px; background: linear-gradient(transparent, #151313e8); color: white; }
+.restaurant-detail-overlay .discovery-kicker { color: #ffad76; }
+.restaurant-detail-overlay h1 { margin: 7px 0; font-size: clamp(28px, 4vw, 42px); }
+.restaurant-detail-overlay p { margin: 0 0 14px; color: #eee; }
+.restaurant-detail-meta { display: flex; flex-wrap: wrap; gap: 17px; color: #f0e9e5; font-size: 12px; }
+.restaurant-detail-overlay small { display: block; margin-top: 10px; color: #e4d8d2; }
+.restaurant-menu { margin-top: 34px; }
+.restaurant-menu-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; }
+.restaurant-menu-heading h2 { margin: 5px 0; color: #292e36; font-size: 26px; }
+.restaurant-menu-heading p { margin: 4px 0 0; color: #777e88; font-size: 13px; }
+.restaurant-menu-search { display: flex; align-items: center; gap: 8px; width: min(280px, 100%); padding: 10px 12px; border: 1px solid #e8e9ec; border-radius: 9px; color: #e23744; }
+.restaurant-menu-search input { width: 100%; border: 0; outline: 0; color: #353a42; font: inherit; font-size: 12px; }
+.restaurant-menu-categories { display: flex; gap: 9px; overflow-x: auto; margin: 20px 0; padding-bottom: 8px; }
+.restaurant-menu-categories button { flex: 0 0 auto; padding: 8px 14px; border: 1px solid #e8e9ec; border-radius: 20px; background: white; color: #636a74; font: inherit; font-size: 12px; cursor: pointer; }
+.restaurant-menu-categories button.selected { border-color: #e23744; background: #fff3f1; color: #cc3340; font-weight: 700; }
+.restaurant-menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.restaurant-food-item { display: flex; justify-content: space-between; gap: 16px; min-height: 158px; padding: 17px; border: 1px solid #eeeff1; border-radius: 13px; background: white; }
+.restaurant-food-info { display: flex; flex: 1; flex-direction: column; align-items: flex-start; min-width: 0; }
+.restaurant-food-category { color: #df563c; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+.restaurant-food-info h3 { margin: 7px 0; color: #282d35; font-size: 16px; }
+.restaurant-food-info p { display: -webkit-box; overflow: hidden; margin: 0 0 10px; color: #7c838c; font-size: 12px; line-height: 1.45; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.restaurant-food-info strong { margin-top: auto; color: #343941; font-size: 14px; }
+.restaurant-food-image-wrap { position: relative; flex: 0 0 112px; height: 112px; }
+.restaurant-food-image-wrap > img { width: 100%; height: 100%; border-radius: 9px; object-fit: cover; background: #f3f4f6; }
+.restaurant-food-add { position: absolute; right: 7px; bottom: -7px; }
+.restaurant-food-add > button, .restaurant-food-counter { min-width: 75px; padding: 7px 12px; border: 1px solid #f1d4ce; border-radius: 7px; background: white; color: #dc4935; box-shadow: 0 2px 6px #0001; font-size: 11px; font-weight: 800; cursor: pointer; }
+.restaurant-food-counter { display: flex; min-width: auto; align-items: center; gap: 11px; padding: 5px 8px; }
+.restaurant-food-counter button { border: 0; background: none; color: #df4935; font-size: 16px; cursor: pointer; }
+.restaurant-menu-empty { padding: 26px 12px; color: #7b828c; text-align: center; }
+.restaurant-detail-state { display: grid; min-height: 50vh; place-content: center; padding: 30px; color: #696f79; text-align: center; }
+.restaurant-detail-state h2 { color: #282d35; }
+.restaurant-detail-state button { justify-self: center; padding: 10px 15px; border: 0; border-radius: 8px; background: #e23744; color: white; cursor: pointer; }
+.restaurant-view-cart { position: fixed; z-index: 20; right: 25px; bottom: 22px; padding: 14px 20px; border: 0; border-radius: 25px; background: #e95a2e; color: white; box-shadow: 0 8px 24px #a8462c55; font: inherit; font-weight: 700; cursor: pointer; }
+@media (max-width: 740px) { .restaurant-detail-page { padding: 12px 14px 75px; } .restaurant-detail-hero { height: 290px; } .restaurant-detail-overlay { padding: 20px; } .restaurant-menu-heading { align-items: stretch; flex-direction: column; } .restaurant-menu-search { width: 100%; } .restaurant-menu-grid { grid-template-columns: 1fr; } }
