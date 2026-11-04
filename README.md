@@ -1,227 +1,205 @@
-# Foodyra Food Delivery Platform
+# 🍔 FeastFlow – Food Delivery Platform
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Sujal-Shejwal/food-delivery-app)
-![GitHub stars](https://img.shields.io/github/stars/Sujal-Shejwal/food-delivery-app?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Sujal-Shejwal/food-delivery-app?style=social)
-
-<p align="center">
-  <a href="https://food-delivery-app-lemon-phi.vercel.app">
-    <img src="https://img.shields.io/badge/🚀%20Live%20App-Open-green?style=for-the-badge" />
-  </a>
-  <a href="https://food-delivery-app-gd5y.vercel.app">
-    <img src="https://img.shields.io/badge/🛠%20Admin%20Panel-Open-blue?style=for-the-badge" />
-  </a>
-</p>
-
----
-
-## 📌 Overview
-
-A **full-stack food delivery platform** built with React, Express, and MongoDB. Customers discover restaurants created in the admin panel, browse each restaurant's assigned menu, add items from one restaurant to a cart, and check out through Stripe.
-
-This project demonstrates **real-world full-stack development**, including:
-
-* Deployment (Vercel + Render)
-* API integration
-* Admin dashboard management
-* Handling production issues (CORS, routing)
-
----
-
-## 🌐 Live Demo
-
-### 🚀 User Frontend
-
-👉 https://food-delivery-app-lemon-phi.vercel.app
-
-### 🛠 Admin Panel
-
-👉 https://food-delivery-app-gd5y.vercel.app
-
-### ⚙ Backend API
-
-👉 https://food-delivery-backend-rbic.onrender.com
-
----
-
-## 🏗 Deployment Architecture
-
-* 🌐 Frontend → Vercel
-* 🛠 Admin Panel → Vercel
-* ⚙ Backend → Render
-* 🗄 Database → MongoDB Atlas
-
----
+FeastFlow is a full-stack food delivery web application that allows users to discover restaurants, explore food menus, add items to their cart, and order food online. It also provides administrative features to manage restaurants, food items, users, and orders.
 
 ## 🚀 Features
 
-* 🔐 User Authentication (Login / Signup)
-* 🛒 Add to Cart & Order Management
-* 💳 Secure Payment Integration (Stripe)
-* 📦 Order Tracking System
-* 🧑‍💼 Admin Dashboard for managing food & orders
-* 🔄 Real-time data sync (Frontend ↔ Admin)
-* 🔔 Notifications System
+### 👤 User Features
+- User registration and login.
+- Browse restaurants and food items.
+- Search and filter restaurants.
+- View restaurant menus.
+- Add food items to cart.
+- Update food quantities.
+- Apply coupon codes.
+- Manage delivery addresses.
+- Place food orders.
+- Track orders and view order history.
+- Manage user profiles.
+- Save favourite restaurants and food items.
+- Submit ratings and reviews.
 
----
+### 🏪 Restaurant Features
+- Restaurant management.
+- Manage food items and menus.
+- View incoming orders.
+- Update order status.
+- Manage restaurant information.
+
+### 🔐 Admin Features
+- Admin dashboard.
+- Manage users.
+- Add, update and delete restaurants.
+- Manage food items.
+- View and manage orders.
+- Monitor platform activities.
 
 ## 🛠️ Tech Stack
 
-### 🔹 Frontend
+**Frontend**
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
 
-* React.js (Vite)
-* CSS
-* Axios
+**Backend**
+- Node.js
+- Express.js
+- REST API
+- JWT Authentication
 
-### 🔹 Backend
+**Database**
+- MongoDB
+- Mongoose
 
-* Node.js
-* Express.js
+**Development Tools**
+- Visual Studio Code
+- Git
+- GitHub
+- npm
 
-### 🔹 Database
+## 📁 Project Structure
 
-* MongoDB Atlas
-
-### 🔹 Tools & Services
-
-* Stripe API
-* JWT Authentication
-
----
-
-## 📂 Project Structure
-
-```
-Food-Delivery/
+```text
+Food-Delivery-Platform/
 │
-├── frontend/   # User Website (Vercel)
-├── backend/    # Server & APIs (Render)
-├── admin/      # Admin Dashboard (Vercel)
+├── frontend/
+│   ├── public/
+│   └── src/
+│
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── uploads/
+│   ├── server.js
+│   └── seed.js
+│
+├── API.md
+├── package.json
+└── README.md
 ```
 
----
+## ⚙️ Installation and Setup
 
-## Setup Instructions
+### 1. Clone the Repository
 
-### Clone the repository
-
-```
-git clone https://github.com/Sujal-Shejwal/food-delivery-app.git
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-### Install dependencies
+### 2. Navigate to the Project
 
-```
-cd frontend && npm install
-cd ../backend && npm install
-cd ../admin && npm install
+```bash
+cd Food-Delivery-Platform
 ```
 
-### Environment variables
+### 3. Install Dependencies
 
-Copy `backend/.env.example` to `backend/.env` and set real values. Do not commit `.env`. Use a long random `JWT_SECRET`, set `ADMIN_EMAIL` and a strong `ADMIN_PASSWORD`, and set the Stripe secret only on the backend. The local backend defaults to development and uses `MONGO_URI_LOCAL` (or `mongodb://127.0.0.1:27017/food_delivery`) so Atlas TLS/network issues do not block local sign-in and sign-up. For deployment, explicitly set `NODE_ENV=production`, configure `MONGO_URI` for Atlas, and allow the deployed backend in Atlas Network Access.
+```bash
+npm install
+```
 
-The admin email and password are not preset and have no default login. Add your own values to `backend/.env`, for example:
+Install dependencies for individual applications if required:
+
+```bash
+cd backend
+npm install
+```
+
+```bash
+cd ../frontend
+npm install
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env` file inside the backend folder.
+
+Example:
 
 ```env
-ADMIN_EMAIL=you@example.com
-ADMIN_PASSWORD=<your-own-strong-password>
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
 ```
 
-Restart the backend after saving. Use corresponding environment settings on the deployed backend (such as Render); never place the admin password in frontend `.env` files.
+Replace the values with your actual MongoDB connection string and a secure JWT secret.
 
-Set `VITE_API_URL` in `frontend/.env` and `admin/.env` only when using a non-default API URL. For local development both use `http://localhost:4000`; production should point both to the same deployed API. Configure `CORS_ORIGINS` for any custom deployed frontend and admin domains.
+**Important:** Never upload your `.env` file or database credentials to GitHub.
 
-The admin portal requires the backend `ADMIN_EMAIL` and `ADMIN_PASSWORD` configuration. If these are missing, the sign-in API returns a clear setup error instead of accepting a default password. Admin API mutations use a signed, expiring admin JWT; customer registration/login remains separate.
+### 5. Start the Backend
 
-Legacy food records are preserved. In the admin Food List, assign each legacy item to a restaurant before it appears in customer restaurant menus. Restaurant deactivation preserves associated foods and order history.
-
-## Run locally (PowerShell)
-
-Start MongoDB first. In three separate terminals, run:
-
-```powershell
-Set-Location 'C:\Users\sayan\Downloads\food-delivery-app-main\food-delivery-app-main\backend'
-$env:NODE_ENV = 'development'
-npm run server
-```
-
-```powershell
-Set-Location 'C:\Users\sayan\Downloads\food-delivery-app-main\food-delivery-app-main\frontend'
+```bash
+cd backend
 npm run dev
 ```
 
-```powershell
-Set-Location 'C:\Users\sayan\Downloads\food-delivery-app-main\food-delivery-app-main\admin'
+### 6. Start the Frontend
+
+Open another terminal:
+
+```bash
+cd frontend
 npm run dev
 ```
 
-Local URLs: customer website `http://localhost:5173`, admin panel `http://localhost:4173`, backend `http://localhost:4000`. If port 5173 is occupied, Vite may select the next available port; use the URL printed in that terminal.
+### 7. Open the Application
 
-Create a restaurant in Admin → Restaurants before adding foods. Choose its restaurant when creating each menu item. Restaurant discovery intentionally uses database records only; no fictional restaurant data or ratings are inserted.
+Frontend:
 
----
+```text
+http://localhost:5173
+```
 
-## 📸 Screenshots
+Backend:
 
-### 🏠 User Flow
+```text
+http://localhost:5000
+```
 
-#### Homepage
+*Actual ports depend on your project configuration.*
 
-![Homepage](./screenshots/home.png)
+## 🔗 API Documentation
 
-#### Menu
+The backend provides REST APIs for:
 
-![Menu](./screenshots/menu.png)
+- User Authentication
+- Restaurant Management
+- Food Management
+- Cart Management
+- Order Management
+- Address Management
+- Coupon Management
+- User Profiles
+- Reviews and Ratings
+- Admin Operations
 
-#### Cart
+Refer to `API.md` for additional API details.
 
-![Cart](./screenshots/cart.png)
+## 🔒 Security
 
-#### Checkout
-
-![Checkout](./screenshots/checkout.png)
-
-#### Orders
-
-![Orders](./screenshots/orders.png)
-
----
-
-### 🧑‍💼 Admin Panel
-
-#### Add Food Item
-
-![Admin Add Food](./screenshots/admin-add-food.png)
-
-#### Food List
-
-![Admin Food List](./screenshots/admin-food-list.png)
-
-#### Orders Management
-
-![Admin Orders](./screenshots/admin-orders.png)
-
----
-
-## 💡 Key Highlights
-
-* Full-stack MERN application
-* Separate Admin & User systems
-* Production deployment (Vercel + Render)
-* Solved real-world issues (CORS, routing, API handling)
-* Scalable architecture
-
----
+- JWT-based authentication.
+- Protected API routes.
+- Environment-based configuration.
+- Secure database connection.
+- Role-based access control.
 
 ## 👨‍💻 Author
 
-**Sujal Shejwal**
+**Sayan Das**
 
-* GitHub: https://github.com/Sujal-Shejwal
+B.Tech – Information Technology
+
+GitHub: https://github.com/sayan-2004-maker
+
+LinkedIn: https://www.linkedin.com/in/sayan-das-5a2344283/
 
 ---
 
-## ⭐ Support
+⭐ If you find this project useful, consider giving it a star on GitHub.
 
-If you like this project, give it a ⭐ on GitHub!
+**FeastFlow – Bringing Delicious Food to Your Doorstep!** 🍕
